@@ -1,0 +1,168 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+  
+  button {
+    margin: 50px;
+    font-size: 20px;
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    animation: vibrate 0.1s infinite;
+  }
+  
+  button:hover {
+    animation: none;
+    background-color: green;
+  }
+  
+  @keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+  }
+  
+  a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    bottom: -3px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  a:hover {
+    color: green;
+  }
+
+  a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .ball {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 5s linear forwards;
+}
+
+@keyframes bounce {
+
+    0% { 
+        transform: translateY(0px);
+        height: 50px;
+        width: 50px; 
+        animation-timing-function: ease-in;
+    }
+    
+    39.5% {
+        transform: translateY(620px); 
+        height: 45px;
+        width: 50px;
+    }
+
+    40% {
+        transform: translateY(620px);
+        height: 30px; 
+        width: 60px;
+    }
+    
+    41% {
+        transform: translateY(620px);
+        height: 45px; 
+        width: 50px;
+        animation-timing-function: ease-out;
+    }
+    
+    59.5% {
+        transform: translateY(250px);
+        height: 50px; 
+        width: 50px;
+    }
+    
+    60% {
+        transform: translateY(250px);
+        height: 50px;
+        width: 50px;
+        animation-timing-function: ease-in;
+    }
+    
+    79% {
+        transform: translateY(620px);
+        height: 45px; 
+        width: 50px;
+    }
+    
+    80% {
+        transform: translateY(620px);
+        height: 35px; 
+        width: 54px;
+    }
+    
+    81% {
+        transform: translateY(620px);
+        height: 45px; 
+        width: 50px;
+        animation-timing-function: ease-out;
+    }
+    
+    90% {
+        transform: translateY(450px);
+        height: 50px; 
+        width: 50px;
+    }
+    
+    91% {
+        transform: translateY(450px);
+        height: 50px; 
+        width: 50px;
+        animation-timing-function: ease-in;
+    }
+    
+    97% {
+        transform: translateY(610px);
+        height: 48px; 
+        width: 50px;
+    }
+    
+    99% {
+        transform: translateY(620px);
+        height: 48px; 
+        width: 51px;
+    }
+    
+    100% {
+        transform: translateY(620px);
+        height: 50px;
+        width: 50px;
+    }
+}
+
