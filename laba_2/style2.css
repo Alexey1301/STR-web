@@ -1,0 +1,72 @@
+body {
+    background-color: #eae7e7;
+    margin: 0;
+    padding: 0;
+    width: 1440px;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.trap-description {
+    text-align: center;
+}
+
+.despicable-description {
+    text-align: justify;
+}
+
+.deadpool-description {
+    text-align: right;
+}
+
+.trap {
+    font-family: 'TrapFont';
+}
+
+.despicable {
+    font-family: 'DespicableFont';
+}
+
+.deadpool {
+    font-family: 'DeadpoolFont';
+}
+
+@font-face {
+    font-family: 'TrapFont';
+    src: url("fonts/TrapFont.ttf");
+}
+
+@font-face {
+    font-family: 'DespicableFont';
+    src: url("fonts/DespicableFont.ttf");
+}
+
+@font-face {
+    font-family: 'DeadpoolFont';
+    src: url("fonts/DeadpoolFont.ttf");
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black; 
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+h1{
+    font-weight: bold;
+}
