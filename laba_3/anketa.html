@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Регистрация в электронном журнале</title>
+</head>
+<body>
+
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <h1>Регистрация в электронном журнале</h1>
+
+        <!-- Личные данные -->
+        <fieldset>
+            <legend>Личные данные</legend>
+
+            <!-- Имя пользователя -->
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
+
+            <!-- Email -->
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+            <!-- Телефон -->
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{2}-\d{2}" placeholder="111-11-11" required>
+
+            <!-- Пароль -->
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Подтверждение пароля -->
+            <label for="confirm_password">Подтверждение пароля:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+        </fieldset>
+
+        <!-- Выбор роли -->
+        <fieldset>
+            <legend>Роль в журнале</legend>
+
+            <!-- Радио-кнопки для выбора роли -->
+            <label><input type="radio" name="role" value="student" checked> Студент</label><br>
+            <label><input type="radio" name="role" value="teacher"> Преподаватель</label><br>
+            <label><input type="radio" name="role" value="parent"> Родитель</label><br>
+        </fieldset>
+
+        <!-- Предметы интереса -->
+        <fieldset>
+            <legend>Ваши предметы</legend>
+
+            <!-- Чекбоксы для предметов -->
+            <label><input type="checkbox" name="subject" value="math"> Математика</label><br>
+            <label><input type="checkbox" name="subject" value="literature"> Литература</label><br>
+            <label><input type="checkbox" name="subject" value="physics"> Физика</label><br>
+            <label><input type="checkbox" name="subject" value="history"> История</label><br>
+        </fieldset>
+
+        <!-- Фото профиля -->
+        <fieldset>
+            <legend>Фото профиля</legend>
+
+            <label for="profile_photo">Загрузите фото профиля:</label>
+            <input type="file" id="profile_photo" name="profile_photo">
+        </fieldset>
+
+        <!-- Кнопки отправки и сброса формы -->
+        <div class="buttons">
+            <input type="submit" value="Зарегистрироваться">
+            <input type="reset" value="Очистить форму">
+        </div>
+
+    </form>
+
+</body>
+</html>
