@@ -39,4 +39,15 @@ html {
     .adaptive > article:nth-child(n+6) {
         width: 22%;
     }
+  }
+  
+  @media screen and (min-width: 700px) and (max-width: 1399px){
+    .adaptive {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .adaptive > article:nth-child(n+4) {
+        width: 46%;
+    }
 }
